@@ -1,0 +1,10 @@
+<?php
+
+
+/**
+*   to custom a specific category we have to create a file with this method:
+*   category-slug.php or category-ID.php and make my customisation .    
+*
+*/
+
+echo "this is programming";

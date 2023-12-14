@@ -1,11 +1,11 @@
 <?php get_header(); ?>
 <div class="container main-post row">
-   <div class="col-8">
+   <div class="col-lg-8 col-md-12 content_container">
       <?php 
          if(have_posts()){
             while(have_posts()){
                the_post();  ?>
-               <div class="post-container col-lg-12 col-md-12">
+               <div class="post-container">
                   <a href="<?php echo get_permalink() ?>">
                      <?php the_title( "<h4 class='post-title'>", "</h4>"); ?>
                   </a>

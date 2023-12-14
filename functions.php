@@ -9,8 +9,7 @@
     include_once('inc/post/custom_excerpt.php');
     include_once('inc/customizer/fontFamily.php');
     include_once('inc/customizer/logo.php');
-    include_once('inc/customizer/globalColor.php');
+    include_once('inc/customizer/global.php');
     include_once('inc/customizer/widget.php');
     include_once('inc/post/numbering_pagination.php');
     include_once('inc/extraFunction/category_get_informations.php');
-?>

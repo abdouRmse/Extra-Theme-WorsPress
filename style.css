@@ -29,9 +29,8 @@ body{
     font-size: 1.125rem;
 }
 
-a,
-i{
-    color: var(--red);
+p{
+    font-size: 13px;
 }
 
 /* end main header */
@@ -71,10 +70,7 @@ i{
 .single-post-page .all-posts h3:nth-child(1)
 {
     text-transform: uppercase;
-    padding: 12px 0;
-    border-bottom: solid 3px var(--primary-bg-color);
     word-spacing: 4px;
-    margin-bottom: 20px;
 }
 
 .single-post-page .all-posts{
@@ -84,6 +80,7 @@ i{
 .single-post-page .author_page {
     background-color: #d5d4d4;
     padding: 60px;
+    margin-top: 20px;
 }
 
 .single-post-page .related_posts{
@@ -103,10 +100,6 @@ i{
 
 /* end bootstrap custom */
 
-.container{
-    margin: 50px auto;
-}
-
 a{
     text-decoration: none;
 }
@@ -119,18 +112,6 @@ nav{
     height: 100px;
 }
 
-.dropdown-menu{
-    background-color: var(--dark);
-    padding: 0;
-}
-
-#menu-header-menu:nth-child(1) li a{
-    color: white;
-    font-size: 17px;
-    font-family: 'manrope';
-    font-weight: bold;
-}
-
 .footer{
     width: 100%;
     color: var(--dark);
@@ -138,10 +119,6 @@ nav{
     font-weight: bold;
     background: var(--footer-bg);
     margin-top: 100px;
-}
-
-.costum-class-nav li{
-
 }
 
 .row{
@@ -168,6 +145,9 @@ nav{
 
 
 /** main post style **/
+.main-post,.author_page,.category_page{
+    margin: 60px auto;
+}
 .post-container{
     display: flex;
     flex-direction: column;
@@ -179,18 +159,16 @@ nav{
     margin-bottom: 30px;
 }
 
-.post-container >a:nth-child(1):hover{
-    color: #3c3939;
-}
-
 .post-container a:not(.read-more){
     height: 35px;
     margin-bottom: 0px;
 }
 
+.content_container{
+    padding: 0;
+}
 .post-container a h4{
     font-size: 25px;
-    color: #3c3939;
     font-weight: bold;
     overflow: hidden;
     text-overflow: ellipsis;
@@ -216,7 +194,6 @@ nav{
 
 .post-container .infos-container .infos{
     font-size: 12px;
-    color: var(--red);
     font-family: 'circular';
     height: 26px;
 }
@@ -255,7 +232,7 @@ nav{
     text-decoration: underline;
 }
 
-@media  (min-width: 980px) {
+@media  (min-width: 991px) {
     .main-post .row{
         width: 70%;
     }
@@ -271,23 +248,20 @@ nav{
 
 }
 
+
 .read-more{
-    background: var(--red);
     width: 170px;
     text-align: center;
     align-self: end;
     padding: 10px;
-    color: white;
+    background-color: white;
     font-size: 14px;
     border-radius: 20px;
-    border: #c3b7b791 solid 1px;
     font-weight: bold;
 }
 .read-more:hover{
     text-decoration: none;
-    border:1px solid var(--red);
-    background-color: white;
-    color: var(--red);
+    color:white;
     transition: ease-out 0.3s;
 }
 
@@ -315,18 +289,15 @@ nav{
     border-radius: 3px;
     height: 100%;
 }
-.numbering-pagination .current{
-    background-color: var(--link-blue);
-}
 /* end main post styla*/
 
 /* single post style*/
 
 .single-post-page header{
-    background-color: yellow;
     display: flex;
     flex-direction: row;
     padding: 0px;
+    margin-bottom: 20px;
 }
 
 .single-post .thumbnail-div{
@@ -345,7 +316,6 @@ header .right-side{
 header .left-side {
     padding: 100px 80px;
     background-color: #141414;
-    border-bottom: 10px solid var(--primary-bg-color);
 }
 header .left-side .title-single-post h1{
     font-family: "NewYork";
@@ -353,7 +323,39 @@ header .left-side .title-single-post h1{
     color: white;
     line-height: 1;
 }
-header .left-side .infos-container .infos,header .left-side .infos-container .infos a{
+@media  screen and (max-width: 991px) {
+    header .left-side .title-single-post h1{
+        font-size: 20px !important;
+    }
+    .single-post-page .h1,
+    .single-post-page .h2,
+    .single-post-page .h3,
+    .single-post-page .h4,
+    .single-post-page .h5,
+    .single-post-page .h6,
+    .single-post-page h1,
+    .single-post-page h2,
+    .single-post-page h3,
+    .single-post-page h4,
+    .single-post-page h5,
+    .single-post-page h6,
+    .single-post-page .all-posts h3:nth-child(1)
+    {
+        font-size: 20px;
+    }
+    .infos,
+    .infos a
+    {
+        font-size: 10px !important;
+    }
+}
+
+.says
+    {
+        font-size: 13px !important;
+    }
+
+    header .left-side .infos-container .infos,header .left-side .infos-container .infos a{
     color: #abb8c3;
     margin-right: 5px;
     font-size: 17px;
@@ -374,6 +376,7 @@ header .left-side .infos-container .infos,header .left-side .infos-container .in
 .status-info{
     justify-content: space-between;
     padding: 0px;
+    margin: 20px auto;
 }
 
 .status-info > div{
@@ -385,9 +388,10 @@ header .left-side .infos-container .infos,header .left-side .infos-container .in
     justify-content: space-around;
     align-items: center;
     padding: 28px;
+    margin-bottom: 20px;
 }
 
-@media screen and (max-width: 600px){
+@media screen and (max-width: 991px){
     .single-post .thumbnail-div{
         height: 300px;
     }
@@ -417,6 +421,11 @@ header .left-side .infos-container .infos,header .left-side .infos-container .in
     }
     .post-pagination{
         padding: 0 103px;
+    }
+    @media screen and (max-width: 991px){
+        .post-pagination{
+            padding: 0 40px;
+        }
     }
     .post-pagination a{
         padding: 14px;
@@ -484,7 +493,6 @@ header .left-side .infos-container .infos,header .left-side .infos-container .in
     position: absolute;
     right: 20px; /* make the reply in the right top*/ 
     top: 0px;
-    border-bottom: 2px solid var(--primary-bg-color);
 }
 .comment .comment-body .reply:hover a{
     color: blue;
@@ -615,15 +623,7 @@ header .left-side .infos-container .infos,header .left-side .infos-container .in
     background-color: transparent;
     position: relative;
 }
-.active-toggle::before{
-    content: "";
-    border-width: 9px;
-    border-style: solid;
-    border-color: transparent transparent var(--dark) transparent;
-    position: absolute;
-    bottom: -16px;
-    right: 11px;
-}
+
 .button-toggle span{
     height: 4px;
     background: white;
@@ -636,7 +636,7 @@ header .left-side .infos-container .infos,header .left-side .infos-container .in
 
 @media (max-width: 991px) {
     .main-post .post-container{
-        margin-bottom: 100px;
+        margin-bottom: 10px;
     }
     /* in the small devices the post container take all the width dont show the sidebar */
     .main-post > div:first-child{
@@ -644,8 +644,9 @@ header .left-side .infos-container .infos,header .left-side .infos-container .in
     }
     /* make dark dropdown menu in small screen*/
     #menu-header-menu{
-        background: var(--dark);
+        background-color: white;
         border-radius: 3px;
+        height: 100%;
     }
 
     /* make dark header in small screen*/
@@ -658,17 +659,12 @@ header .left-side .infos-container .infos,header .left-side .infos-container .in
     .open{
         display: inline-block;
         position: absolute;
-        top: 100px;
         right: 0px;
-        width: 100%;
+        width: 130%;
     }
     .open li{
         width: 100%;
         border-bottom: 1px #80808036 solid;
-        background: var(--dark);
-    }
-    .open li a{
-        color: white;
     }
     .open li:last-child{
         border-bottom: none;
@@ -677,6 +673,12 @@ header .left-side .infos-container .infos,header .left-side .infos-container .in
     /* hide the sidebar in small divaces*/
     .container-sidebar{
         display: none;
+        padding: 0;
+    }
+
+    /* breadmark */
+    .breadcrumb-holder .container ol{
+        width: 100% !important;
     }
 }
 /**/
@@ -698,28 +700,15 @@ header .left-side .infos-container .infos,header .left-side .infos-container .in
 }
 
 #sidebar .sidebar-content{
-    background: white;
     padding: 20px;
     margin-bottom: 20px;
+    border: 1px solid #d7d2d287;
+    border-radius: 2px;
 }
 .container-sidebar{
-    width: 30%;
+    width: 32%;
+    padding: 0;
 }
- 
-/* calender */
-.wp-calendar-table :where(td,th){
-    border-color: var(--primary-bg-color) !important;
-}
-#wp-calendar thead tr th
-{
-    background-color: var(--primary-bg-color);
-    color: white;
-}
-#today{
-    background-color: var(--link-blue);
-    color:white;
-}
-/* calender */
 
 .wp-widget-group__inner-blocks{ /* latest post links*/
     font-size: 13px;
@@ -727,3 +716,52 @@ header .left-side .infos-container .infos,header .left-side .infos-container .in
 /* end recent posts*/
 
 /* end style sidebar */
+
+/* breadcrumb */
+.breadcrumb-holder{
+    background: white;
+    margin: 30px;
+}
+.breadcrumb-holder .container{
+    margin: 50px auto;
+    padding: 10px;
+    margin: 0 auto;
+}
+
+.breadcrumb-holder .container ol{
+    line-height: 14px;
+    text-align: center;
+    margin: auto;
+    /* display: inline-flex; */
+    display: flex;
+    justify-content: space-around;
+    width: 50%;
+    font-size: 16px;
+}
+
+.breadcrumb-holder .container ol a{
+    font-size: 14px;
+}
+
+.breadcrumb-holder .container ol .active{
+    color: #302e2e;
+    font-size: 14px;
+}
+
+.breadcrumb-holder .container ol i{
+    color: grey;
+}
+
+/* category page begin */
+
+.category_page>:first-child {
+        background: white;
+        padding: 20px;
+        display: flex;
+        justify-content: center;
+        text-transform: capitalize;
+        font-weight: bold;
+}
+
+/* category page end */
+

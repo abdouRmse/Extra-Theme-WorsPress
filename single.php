@@ -1,4 +1,8 @@
-<?php get_header(); ?>
+<?php 
+    get_header(); 
+    include('breadcrumb.php');
+
+?>
 
 <div class="single-post-page">
       <?php 
@@ -74,13 +78,13 @@
             </div>
         </div>
     <div class="container row status-info">
-        <div class="col-3">
+        <div class="col-lg-3 col-12">
             <div class="header">Posts Count</div><?php echo count_user_posts(get_the_author_meta("ID")) ?>
         </div>
-        <div class="col-3">
+        <div class="col-lg-3 col-12">
             <div class="header">Comments Count</div><?php echo get_comments( array('post_author' => get_current_user_id(),'post_status' => 'publish','type'=> 'comment','count'=> true) ); //if count is false i get an object :> ?>
         </div>
-        <div class="col-3">
+        <div class="col-lg-3 col-12">
             <div class="header">Total Post View</div><?php echo count_user_posts( get_the_author_meta( "ID")) ?>
         </div>
     </div>

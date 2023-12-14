@@ -1,11 +1,15 @@
 <?php get_header(); ?>
-<div class="container main-post row">
-   <div class="col-8">
+
+<div class="container main-post row category_page">
+   <div class="col-12">
+      <h4><?php echo get_the_category()[0]->name; ?> <?php echo "   ";?>category</h4>
+   </div>
+   <div class="col-lg-8 col-md-12 content_container">
       <?php 
          if(have_posts()){
             while(have_posts()){
                the_post();  ?>
-               <div class="post-container col-lg-12 col-md-12">
+               <div class="post-container">
                   <a href="<?php echo get_permalink() ?>">
                      <?php the_title( "<h4 class='post-title'>", "</h4>"); ?>
                   </a>
@@ -55,11 +59,11 @@
    </div>
    <div class="col-4 container-sidebar">
       <?php get_sidebar( "cat" ); ?> <!-- make my custom sidebar tha i made (sidebar-cat) -->
-      <?php if ( is_active_sidebar( 'main-sidebar' ) ) { ?>
+     <!--  <?php //if ( is_active_sidebar( 'main-sidebar' ) ) { ?>
          <ul id="sidebar">
-            <?php dynamic_sidebar('main-sidebar'); ?>
+            <?php //dynamic_sidebar('main-sidebar'); ?>
          </ul>
-      <?php } ?>
+      <?php //} ?> -->
    </div>
 </div>
          
